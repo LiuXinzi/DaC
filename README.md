@@ -9,12 +9,6 @@
 
 仿真环境之中 hdf5 封装 action observation， observation从env中task的get_observation中获得
 
-qpos：raw qpos：0-7,8-16,0-5,8-14
-
-qvel: raw qvel：0-7,8-16,0-5,8-14
-
-image
-
 现实环境中需要使用相机获得照片，使用代码获得角度和速度数剧打包成hdf5
 
 ## 遥控系统 --9.20左右完成
