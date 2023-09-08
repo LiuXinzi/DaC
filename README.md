@@ -26,9 +26,13 @@ leader机械臂-->python-get_angles-->python-write_angle-->socket-->树莓派-->
 3. 实验区域标定：follower机械臂工作区间在黑色胶带范围内，黄色胶带区域可接触但不可垂直抓取（不适合用做物体摆放区域），预计抓取任务从黑色叉号标记点之间转移，摄像头在黑色胶带外，垂直照射工作区间的中心，并且标定中心为工作区间中心
 ### 采集数据
 action： joint position （leader）+末端01 -- 六个角度 OR 末端绝对坐标和姿态 50hz --> 一个大的关节角度？encode--> z 
+
 observation：
+
 joint position（current follower）？
+
 photo： 480*640 50hz
+
 需要采集的数据：50HZ joint position ，photo
 
 ### 动作采集 --物体抓取与放置
