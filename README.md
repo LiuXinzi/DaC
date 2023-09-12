@@ -34,15 +34,9 @@ leader机械臂-->python-get_angles-->python-write_angle-->socket-->树莓派-->
 4. 修改代码 zjw .13之前
 5. 摄像头安装： 使用opencv读取视频流，目前数据线太短，需要较长的数据线
 ### 采集数据
-action： joint position （leader）+末端01 -- 六个角度 OR 末端绝对坐标和姿态 50hz --> 一个大的关节角度？encode--> z 
+action： leader 的joint position
 
-observation：
-
-joint position（current follower）？
-
-photo： 480*640 50hz
-
-需要采集的数据：50HZ joint position ，photo 可以使用api直接获得
+observations: follower 的 joint position and picture
 
 ### 动作采集 --物体抓取与放置
 具体动作： 夹爪夹取快递盒，并将快递盒放置在规定黑色区域内
