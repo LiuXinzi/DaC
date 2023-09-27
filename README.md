@@ -30,18 +30,3 @@ observations joints： 14维，（joint position + 0/1 ）*2
 observations 4 RGB images： 4 * 480* 640 * 3
 
 
-### 目前的采集数据
-action： leader 的joint position
-
-observations: follower 的 joint position and picture
-
-### 动作采集 --推动物体到达指定区域
-具体动作： 夹爪推动快递盒，并将快递盒推动到规定黑色区域内
-
-任务：使用摄像头获得动作照片，关节角度等信息并打包，采集50次用于后续训练
-### 动作采集 --夹取放置
-具体任务： 夹爪快递盒，放置于黑色标线的位置
-
-任务：使用摄像头获得动作照片，关节角度等信息并打包，采集50次用于后续训练
-
-
