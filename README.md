@@ -31,6 +31,7 @@ observations joints： 14维，（joint position + 0/1 ）*2
 observations 4 RGB images： 4 * 480* 640 * 3
 ### 目前的数据采集
 目前使用syn遥控机械臂，以30HZ的频率收集拍照，使用大象的python api写入leader和follower的关节角度到rec.log文件中，读取文件使用两个list来保存两个机械臂分别的关节角度，之后与image一起打包为一组hdf5文件
+
 action sequence： 6维，joint position
 
 observations joints： 6维，joint position
