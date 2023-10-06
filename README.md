@@ -28,6 +28,8 @@
 Temporal Ensemble：为了避免一个新的环境被突然合并带来的剧烈运动，让不同的动作块重叠，通过指数加权来预测
 
 网络包括一个一个CVAE编码器和一个CVAE解码器。CVAE编码器：仅用于训练CVAE解码器，测试的时候不需要。输入为当前的观察和动作序列作，预测样式变量z的分布的均值和方差，它被参数化为一个对角高斯分布。CVAE解码器：即策略，使用z条件和当前观测（图像+联合位置）来预测动作序列。在测试时将z设为先验分布的平均值，即从0到确定性解码。
+
+参数：learning rate 1e-5, batch size 8, encode layers 4, decoder layers 7, feedforward dimension 3200, hidden dimension 512, heads 8, chunk size 100, beta 10, dropout 0.1
 ### 数据采集
 #### 原文的数据收集
 原文使用ALOHA远程操作来收集演示。根据任务的复杂性，每次需要8-14秒，控制频率为50Hz，400-700个时间步长，为每个任务记录了50个演示，除了螺纹尼龙搭扣有100个。搭载四个摄像机，两个机械臂，收集以下信息用于训练：
@@ -45,5 +47,10 @@ action sequence： 6维，joint position
 observations joints： 6维，joint position
 
 observations top RGB images： 1 * 480* 640 * 3
+
+#### 原因分析
+1. 网络只修改了输入参数维度，可能需要调节内部结构（难度可能较大，我估计无法完成）
+2. 数据流畅性，数据误差大，较多时候没有精准完成（），数据随机性大，训练任务较多
+3. 摄像头信息不够？
 
 
