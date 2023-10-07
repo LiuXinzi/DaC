@@ -1,6 +1,7 @@
 ## act 介绍
 数据 ： 链接：https://pan.baidu.com/s/1-KHDPKEF_zEDTcvXlYQeXA 
-提取码：1234
+提取码：1234\
+数据保存在sim_transfer_cube_scripted文件夹中
 
 代码 imitate_episodes 是原代码训练测试程序，我们的测试程序为try.py，装配完环境之后运行原文代码把文件改为try就可以
 
