@@ -31,7 +31,12 @@ python3 try.py \
 3. 遥控系统：
    
    前六个关节角度：leader机械臂-->python-get_angles-->python-write_angle-->socket-->树莓派-->控制follower机械臂，读取需要时间，运动也需要时间，但是读取和运动并不同步。（即读取完并传递信号给follower机械臂为程序内进程，此时程序结束，之后树莓派控制机械臂不属于程序内，就会导致可叠加的延迟）因此如果只用while循环，不断进入循环会导致延迟不断增加，所以同步过程修改代码为等待程序运行完毕之后进入下一个while循环: \
-只使用while循环，程序不断读取下一个位置，传递给树莓派之后继续读取，树莓派一直在接收，但是接收时间短控制时间长，会导致延迟叠加 \
+只使用while循环，程序不断读取下一个位置，传递给树莓派之后继续读取，树莓派一直在接收，但是接收时间短控制时间长，会导致延迟叠加
+```python
+while True: 
+   follower.write_angles(leader.get_angles(),1800#速度) 
+   time.sleep(0.05)
+```
 使用wait_command_down,程序每次读取到下一个目标位置，等待树莓派控制机械臂运动结束后函数中止，进入下一次while循环读取下一个坐标
 ```python
 while True: 
