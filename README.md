@@ -48,7 +48,7 @@ while True:
    follower.write_angles(leader.get_angles(),1800#速度) 
    time.sleep(0.05)
 ```
-使用wait_command_down,程序每次读取到下一个目标位置，等待树莓派控制机械臂运动结束后函数中止，进入下一次while循环读取下一个坐标
+使用wait_command_down,程序每次读取到下一个目标位置，等待树莓派控制机械臂运动结束后函数中止，进入下一次while循环读取下一个坐标，因此不会叠加延迟，不管时间多长都只会有最后一步的延迟
 ```python
 while True: 
    follower.write_angles(leader.get_angles(),1800#速度) #发送所有角度给机械臂所有关节
