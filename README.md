@@ -3,7 +3,6 @@
 - 基于0-1夹爪的数据采集（lift任务）
 - 测试通信频率、控制频率、延迟程度
   响应速度1ms以内，通信频率在50-100hz
-
 ## act 介绍
 数据 ： 链接：https://pan.baidu.com/s/1-KHDPKEF_zEDTcvXlYQeXA 
 提取码：1234\
