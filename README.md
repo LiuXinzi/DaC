@@ -15,20 +15,7 @@ pre是训练之前做的操作，post是网络输出角度后做的操作\
 读取并传递给b臂速度在 0.006-0.01s 约 100-167HZ\
 b臂控制机械臂运动至结束需要 0.005（不用运动） - 2（运动到最大路程） s
 使用网线可以优化到0.001
-## act 介绍
-数据 ： 链接：https://pan.baidu.com/s/1-KHDPKEF_zEDTcvXlYQeXA 
-提取码：1234\
-数据保存在sim_transfer_cube_scripted文件夹中
 
-代码 imitate_episodes 是原代码训练测试程序，我们的测试程序为try.py，装配完环境之后运行原文代码把文件改为try就可以
-
-运行：
-python3 try.py \
---task_name sim_transfer_cube_scripted \
---ckpt_dir <ckpt dir> \
---policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 8 --dim_feedforward 3200 \
---num_epochs 2000  --lr 1e-5 \
---seed 0
 # 单一机械臂控制
 ## 遥控系统 
 ### 原文&目前-思路对比
