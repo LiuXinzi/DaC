@@ -1,9 +1,9 @@
 ## 计划（10.16-10.22）
 
-1. command
-2. 控制回路
-3. 
 
+## 控制回路
+1. 前六个关节：leader机械臂-->python-get_angles-->python-write_angle-->socket-->树莓派-->控制follower机械臂 、
+2. 夹爪： leader机械臂端口状态-->u2d2-->舵机
 ## 归一化
 ![image](https://github.com/LiuXinzi/DaC/assets/133741133/5700cd72-b7fb-4697-8dcc-4a24279898ee)\
 qpos为采集的五十组数据里所有follower的角度的平均值和方差\
