@@ -1,6 +1,8 @@
 ## 计划（10.16-10.22）
 
-
+1. command
+2. 控制回路
+3. 
 
 ## 归一化
 ![image](https://github.com/LiuXinzi/DaC/assets/133741133/5700cd72-b7fb-4697-8dcc-4a24279898ee)\
