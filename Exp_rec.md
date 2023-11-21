@@ -1,7 +1,7 @@
 2023.11.19
 实验:lift 采样数据数量：200 每组数据长度：48 trunk：30 lrate：5e-5 epoch：16000
 | Trunksize | Learning Rate |	Epoch |
-|:--------：| :---------:|：--------:|
+|:--------|:---------|:--------|
 | 30 | 5e-5 |16000|
 
 误差：![50b1303ca107eba18f0829c830fe935](https://github.com/LiuXinzi/DaC/assets/133741133/b6b23497-aa52-4e83-9ddc-ecf506730778)
